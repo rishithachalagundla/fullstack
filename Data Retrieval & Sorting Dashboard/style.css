@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f4f7;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.controls {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+select, button {
+  padding: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+th {
+  background: #007bff;
+  color: white;
+}
+
+.count-box {
+  margin-top: 20px;
+  background: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
