@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2 - Tantraz Registration</title>
+</head>
+<body>
+
+<h2>Tantraz Event Registration</h2>
+
+<form aria-label="Tantraz Registration Form">
+
+    <!-- Full Name -->
+    <label for="fullname">Full Name</label>
+    <input type="text"
+           id="fullname"
+           name="fullname"
+           aria-label="Full name"
+           placeholder="Enter your full name">
+
+    <!-- Email -->
+    <label for="email">Email</label>
+    <input type="email"
+           id="email"
+           name="email"
+           aria-label="Email address"
+           placeholder="example@email.com">
+
+    <!-- Participation Category -->
+    <label for="category">Participation Category</label>
+    <select id="category"
+            name="category"
+            aria-label="Participation category">
+        <option value="">Select category</option>
+        <option value="individual">Individual</option>
+        <option value="team">Team</option>
+        <option value="audience">Audience</option>
+    </select>
+
+    <!-- T-Shirt Size -->
+    <label>T-Shirt Size</label><br>
+    <input type="radio" name="tshirt" value="S"> S
+    <input type="radio" name="tshirt" value="M"> M
+    <input type="radio" name="tshirt" value="L"> L
+    <input type="radio" name="tshirt" value="XL"> XL
+
+    <br><br>
+
+    <!-- Technical Interests -->
+    <label>Technical Interests</label><br>
+    <input type="checkbox" value="AI"> AI
+    <input type="checkbox" value="Web Development"> Web Development
+    <input type="checkbox" value="Cloud Computing"> Cloud Computing
+
+    <br><br>
+
+    <!-- Expectations -->
+    <label for="expectations">Expectations / Suggestions</label>
+    <textarea id="expectations"
+              name="expectations"
+              aria-label="Expectations or suggestions"
+              rows="4"
+              placeholder="Write your expectations"></textarea>
+
+    <br><br>
+    <button type="submit">Register</button>
+
+</form>
+
+</body>
+</html>
