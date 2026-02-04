@@ -1,0 +1,161 @@
+from IPython.display import HTML, display
+
+html_code = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Blog Platform with Media</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #eef1f5;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+/* NAVBAR */
+nav {
+    background: white;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+nav a {
+    margin: 0 15px;
+    color: #555;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #c33764;
+}
+
+/* BLOG CONTAINER */
+section {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+}
+
+/* ARTICLE CARD */
+article {
+    background: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 14px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+article h2 {
+    color: #1d2671;
+}
+
+article p {
+    line-height: 1.6;
+}
+
+/* MEDIA */
+video, audio {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+/* READ MORE LINK */
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: #c33764;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Modern Blog Platform</h1>
+    <p>Articles • Video Streaming • Audio Playback</p>
+</header>
+
+<nav>
+    <a href="#article1">Articles</a>
+    <a href="#video">Videos</a>
+    <a href="#audio">Audio</a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN HTML</a>
+</nav>
+
+<section>
+
+    <article id="article1">
+        <h2>📘 Understanding HTML5 Semantic Tags</h2>
+        <p>
+            HTML5 introduces semantic elements that clearly define the structure
+            of a webpage and improve accessibility.
+        </p>
+        <a class="read-more" href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">
+            Read Full Article →
+        </a>
+    </article>
+
+    <article id="video">
+        <h2>🎬 Video Streaming Blog</h2>
+        <p>Demonstration of HTML5 video streaming with controls.</p>
+        <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+        <a class="read-more" href="https://www.w3schools.com/html/html5_video.asp" target="_blank">
+            Learn about HTML5 Video →
+        </a>
+    </article>
+
+    <article id="audio">
+        <h2>🎧 Audio Streaming Blog</h2>
+        <p>HTML5 audio playback with built-in controls.</p>
+        <audio controls>
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+        </audio>
+        <a class="read-more" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio" target="_blank">
+            Learn about HTML5 Audio →
+        </a>
+    </article>
+
+</section>
+
+<footer>
+    <p>© 2026 Blog Platform | HTML5 Media & Articles</p>
+</footer>
+
+</body>
+</html>
+"""
+
+display(HTML(html_code))
