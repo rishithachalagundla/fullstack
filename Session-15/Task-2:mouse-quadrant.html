@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Quadrant Tracker</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial;
+            font-size: 24px;
+            transition: background-color 0.3s;
+        }
+
+        #info {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="info">
+    Move Mouse
+</div>
+
+<script>
+
+    const info = document.getElementById("info");
+
+    document.addEventListener("mousemove", function (event) {
+
+        const x = event.clientX;
+        const y = event.clientY;
+
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        let quadrant = "";
+
+        // Top Left
+        if (x < width / 2 && y < height / 2) {
+
+            document.body.style.backgroundColor = "lightcoral";
+            quadrant = "Top Left";
+
+        }
+
+        // Top Right
+        else if (x >= width / 2 && y < height / 2) {
+
+            document.body.style.backgroundColor = "lightblue";
+            quadrant = "Top Right";
+
+        }
+
+        // Bottom Left
+        else if (x < width / 2 && y >= height / 2) {
+
+            document.body.style.backgroundColor = "lightgreen";
+            quadrant = "Bottom Left";
+
+        }
+
+        // Bottom Right
+        else {
+
+            document.body.style.backgroundColor = "lightyellow";
+            quadrant = "Bottom Right";
+
+        }
+
+        info.innerHTML = `
+            X: ${x} <br>
+            Y: ${y} <br>
+            Quadrant: ${quadrant}
+        `;
+
+    });
+
+</script>
+
+</body>
+</html>
